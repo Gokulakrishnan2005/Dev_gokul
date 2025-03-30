@@ -3,23 +3,23 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header className="bg-gray-800 text-white p-4 flex justify-between items-center">
-      <h1 className="text-2xl font-bold">Personal Site</h1>
-      <nav className="space-x-4">
-        <Link to="/" className="hover:text-gray-300">
-          Home
-        </Link>
-        <Link to="/about" className="hover:text-gray-300">
-          About
-        </Link>
-        <Link to="/portfolio" className="hover:text-gray-300">
-          Portfolio
-        </Link>
-        <Link to="/contact" className="hover:text-gray-300">
-          Contact
-        </Link>
-      </nav>
-    </header>
+    <div>
+     <header className="bg-[#d9d9d9] py-6 px-6 flex justify-between items-center">
+        <div className="font-bold">GOKULAKRISHNAN</div>
+        <nav className="hidden md:flex space-x-8">
+          <a href="#about" className="hover:text-[#767676]">
+            About
+          </a>
+          <a href="#projects" className="hover:text-[#767676]">
+            Projects
+          </a>
+          <a href="#contact" className="hover:text-[#767676]">
+            Contact
+          </a>
+        </nav>
+        
+     </header>
+      </div>
   );
 };
 
