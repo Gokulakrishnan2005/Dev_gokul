@@ -99,9 +99,9 @@ function Portfolio() {
             </div>
           </div>
           <div>
-            <div className="bg-[#f3f3f3] rounded-lg overflow-hidden">
+            <div className="bg-[#f3f3f3] rounded-lg overflow-hidden m-10">
               {/* Replace with your own image */}
-              <img src="https://via.placeholder.com/500" alt="Robert Garcia" className="w-full h-auto" />
+              {/* <img src="https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/1719946982791gokul.jpeg?alt=media&token=8e3bb802-ba8c-4cf8-931f-ace4099a17f2" alt="Robert Garcia" className="w-100 h-100 object-cover rounded-lg" /> */}
             </div>
           </div>
         </div>
