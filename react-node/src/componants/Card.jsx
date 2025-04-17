@@ -3,21 +3,69 @@ import styled from 'styled-components';
 
 const Card = () => {
   return (
+    // {/* Filtered Projects */}
+    // {filteredProjects.map((project) => (
+    //   <div key={project.id} className="bg-white p-4">
+    //     <img src={project.image || "/placeholder.svg"} alt={project.alt} className="w-full h-auto" />
+    //   </div>
+    // ))}
     <StyledWrapper>
       <section id="card1" className="card">
-        <svg viewBox="0 0 16 16" className="bi bi-image-fill" fill="currentColor" height={40} width={40} xmlns="http://www.w3.org/2000/svg">
-          <path d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2V3zm1 9v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12zm5-6.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0z" />
-        </svg>
-        <div className="card__content">
+      <img 
+      src="https://picsum.photos/200/300" 
+      alt="Image Icon" 
+      className="w-full h-full object-cover rounded-lg" 
+      />
+        <div class="card__content" >
           <p className="card__title">Lorem Ipsum</p>
-          <p className="card__description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae
-            justo vel lorem tincidunt ultrices at non nunc. Donec in sapien viverra,
-            tincidunt augue id, efficitur massa.
+          <p className="card__description bg">
+            I Love card to place my products in a site.
           </p>
         </div>
       </section>
     </StyledWrapper>
+    // {/* Portfolio Section */}
+  //   <section id="projects" className="px-6 py-12">
+  //   <div className="max-w-6xl mx-auto">
+  //     <h2 className="text-3xl font-bold text-center mb-4">Projects</h2>
+  //     <p className="text-center text-[#767676] max-w-2xl mx-auto mb-8">
+  //       Amet Minim Mollit Non Deserunt Ullamco Est Sit Aliqua Dolor Do Amet Sint. Velit Officia Consequat Duis Enim
+  //       Velit Mollit. Lorem Ipsum
+  //     </p>
+
+  //     {/* Categories */}
+  //     <div className="flex flex-wrap justify-center gap-4 mb-8">
+  //       {["All Category", "UI Design", "Web Template", "Logo", "Branding"].map((category) => (
+  //         <button
+  //           key={category}
+  //           className={`font-medium transition-colors ${
+  //             activeCategory.toLowerCase() === category.toLowerCase()
+  //               ? "text-[#ffb400]"
+  //               : "text-[#0a0a0a] hover:text-[#767676]"
+  //           }`}
+  //           onClick={() => setActiveCategory(category.toLowerCase())}
+  //         >
+  //           {category}
+  //         </button>
+  //       ))}
+  //     </div>
+
+  //     {/* Portfolio Grid */}
+  //     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  //       {/* Add Project Button */}
+  //       <div className="bg-[#ffb400] aspect-square flex items-center justify-center">
+  //         <span className="text-4xl">+</span>
+  //       </div>
+
+  //       {/* Filtered Projects */}
+  //       {filteredProjects.map((project) => (
+  //         <div key={project.id} className="bg-white p-4">
+  //           <img src={project.image || "/placeholder.svg"} alt={project.alt} className="w-full h-auto" />
+  //         </div>
+  //       ))}
+  //     </div>
+  //   </div>
+  // </section>
   );
 }
 
@@ -56,14 +104,19 @@ const StyledWrapper = styled.div`
     height: 100%;
     padding: 20px;
     box-sizing: border-box;
-    background-color: #f2f2f2;
     transform: rotateX(-90deg);
     transform-origin: bottom;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
   }
 
   .card:hover .card__content {
     transform: rotateX(0deg);
+    
+    }
+  
+  .card:hover  img{
+    filter: blur(10px);
   }
 
   .card__title {
@@ -84,7 +137,7 @@ const StyledWrapper = styled.div`
     color: #000000;
     line-height: 1.4;
   }
-  /* Commands to change the shadows in dark mode
+
   @media (prefers-color-scheme: dark) {
     .card:hover {
     box-shadow: 0 8px 16px #000000;
